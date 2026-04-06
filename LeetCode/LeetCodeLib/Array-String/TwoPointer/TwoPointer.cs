@@ -1,5 +1,42 @@
 namespace LeetCodeLib.Array_String;
+public class ListNode
+{
+    public int Val;
+    public ListNode? Next;
+    public ListNode(int val) { Val = val; }
+}
 
+public class LinkedListCycle
+{
+    // LC 142: Linked List Cycle II — returns the node where cycle begins
+    public ListNode DetectCycle(ListNode head)
+    {
+        ListNode slow = head;
+        ListNode fast = head;
+
+        // Phase 1: detect if a cycle exists
+        while (fast != null && fast.Next != null)
+        {
+            slow = slow.Next;       // moves 1 step
+            fast = fast.Next.Next;  // moves 2 steps
+
+            if (slow == fast) // They met — cycle confirmed
+            {
+                // Phase 2: find cycle entry point
+                // Reset slow to head; keep fast at meeting point
+                slow = head;
+                while (slow != fast)
+                {
+                    slow = slow.Next;
+                    fast = fast.Next; // both move 1 step now
+                }
+                return slow; // Cycle entry node
+            }
+        }
+
+        return null; // No cycle
+    }
+}
 public class TwoPointer
 {
       // LC 167: Two Sum II - Input Array is Sorted
