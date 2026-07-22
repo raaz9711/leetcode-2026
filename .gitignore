@@ -1,0 +1,43 @@
+## Core Build Results
+/*/[Bb]in/
+/*/[Oo]bj/
+/*/[Ll]og/
+/*/[Log]/
+
+## Visual Studio Cache and Settings
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+## VS Code Settings and Workspace files
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+## JetBrains Rider / Resharper
+.idea/
+*.sln.iml
+
+## User Secrets and Local App Configuration
+appsettings.Development.json
+appsettings.local.json
+secrets.json
+
+## Publishing and Artifacts
+publish/
+*.pubxml
+*.pubxml.user
+
+## Test Results and Crash Dumps
+[Tt]est[Rr]esult*/
+*.crash
+*.dump
+
+## OS Specific Files
+.DS_Store
+Thumbs.db
